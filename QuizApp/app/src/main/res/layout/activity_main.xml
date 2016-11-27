@@ -9,12 +9,250 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            style="@style/title"
+            android:text="test your java skills"/>
+
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
+        <TextView
+            style="@style/listItem"
+            android:text="1. How will you describe Java?"/>
+
+        <RadioGroup
+            android:id="@+id/firstQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/firstFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programming Language"/>
+
+            <RadioButton
+                android:id="@+id/firstSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Both Programming Language and Platform"/>
+
+            <RadioButton
+                android:id="@+id/firstThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platform"/>
+
+            <RadioButton
+                android:id="@+id/firstFourth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abstract Machine"/>
+        </RadioGroup>
+        <Button
+            style="@style/checkBtn"
+            android:onClick="checkResult1" />
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
+        <TextView
+            style="@style/listItem"
+            android:text="2. What's the basic unit in Java ?"/>
+        <EditText
+            android:id="@+id/second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Thinking of OOP"
+            android:inputType="text"/>
+        <Button
+            style="@style/checkBtn"
+            android:onClick="checkResult2"/>
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
+        <TextView
+            style="@style/listItem"
+            android:text="3. Which statement at line 7 constructs an instance of the inner class? "/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/snippet" />
+        <RadioGroup
+            android:id="@+id/third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/third1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InsideOne ei = eo.new InsideOne();"/>
+
+            <RadioButton
+                android:id="@+id/third2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eo.InsideOne ei = eo.new InsideOne();"/>
+
+            <RadioButton
+                android:id="@+id/third3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InsideOne ei = EnclosingOne.new InsideOne();"/>
+
+            <RadioButton
+                android:id="@+id/third4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EnclosingOne InsideOne ei = eo.new InsideOne();"/>
+        </RadioGroup>
+        <Button
+            style="@style/checkBtn"
+            android:onClick="checkResult3"/>
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
+        <TextView
+            style="@style/listItem"
+            android:text="4. Given: \n  Integer i = new Integer (42); \n  Long 1 = new Long (42); \n  Double d = new Double (42.0); \nWhich two expressions evaluate to True? (Choose Two) "/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/four1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="(i == 1)"
+                    android:onClick="onCheckboxClicked"
+                    />
+                <CheckBox
+                    android:id="@+id/four2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="(i == d)"
+                    android:onClick="onCheckboxClicked"
+                    />
+                <CheckBox
+                    android:id="@+id/four3"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="(d == 1)"
+                    android:onClick="onCheckboxClicked"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/four4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="(i.equals(d))"
+                android:onClick="onCheckboxClicked"
+                />
+            <CheckBox
+                android:id="@+id/four5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="(d.equals(i))"
+                android:onClick="onCheckboxClicked"
+                />
+            <CheckBox
+                android:onClick="onCheckboxClicked"
+                android:id="@+id/four6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="(i.equals(42))"
+                />
+        </LinearLayout>
+
+        <Button
+            style="@style/checkBtn"
+            android:onClick="checkResult4"/>
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
+        <TextView
+            style="@style/listItem"
+            android:text="5. Which is valid declarations of a float?"/>
+
+        <RadioGroup
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/five1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Float foo = -1;"/>
+
+            <RadioButton
+                android:id="@+id/five2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Float foo = 1.0; "/>
+            <RadioButton
+                android:id="@+id/five3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Float foo = 42e1;"/>
+            <RadioButton
+                android:id="@+id/five4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Float foo = 3.03d;"/>
+
+        </RadioGroup>
+        <Button
+            style="@style/checkBtn"
+            android:onClick="checkResult5"/>
+
+        <View
+            style="@style/bar"
+            android:background="@color/viewColor">
+        </View>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="your score: "
+            android:textAllCaps="true"/>
+        <TextView
+            android:id="@+id/final_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:onClick="submitScore"/>
+
     </LinearLayout>
 
 </ScrollView>
