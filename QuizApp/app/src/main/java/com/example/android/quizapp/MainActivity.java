@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton right = (RadioButton) findViewById(R.id.firstFirst);
         int checkedId = radioGroup.getCheckedRadioButtonId();
         if (checkedId == right.getId()) {
-            displayToast("Right Choice!");
+            displayToast("Question 1: Right Choice!");
             return true;
         } else {
-            displayToast("Wrong Answer, the answer is: " + right.getText().toString());
+            displayToast("Question 1: Wrong Answer, the answer is: " + right.getText().toString());
             return false;
         }
     }
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         EditText et = (EditText) findViewById(R.id.second);
         String answer = et.getText().toString();
         if (answer.equals("class")) {
-            displayToast("Right Choice! ");
+            displayToast("Question 2: Right Choice! ");
             return true;
         } else {
-            displayToast("Wrong Answer, the answer is: class");
+            displayToast("Question 2: Wrong Answer, the answer is: class");
             return false;
         }
     }
@@ -53,40 +53,33 @@ public class MainActivity extends AppCompatActivity {
         RadioButton right = (RadioButton) findViewById(R.id.third1);
         int checkedId = radioGroup.getCheckedRadioButtonId();
         if (checkedId == right.getId()) {
-            displayToast("Right Choice!");
+            displayToast("Question 3: Right Choice!");
             return true;
         } else {
-            displayToast("Wrong Answer, the answer is: " + right.getText().toString());
+            displayToast("Question 3: Wrong Answer, the answer is: " + right.getText().toString());
             return false;
         }
     }
 
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
+    private boolean isCheckAnswerBox() {
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.four1);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.four2);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.four3);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.four4);
+        CheckBox checkBox5 = (CheckBox) findViewById(R.id.four5);
+        CheckBox checkBox6 = (CheckBox) findViewById(R.id.four6);
 
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.four4:
-                if (checked)
-                    options += 1;
-                break;
-            case R.id.four5:
-                if (checked)
-                    options += 1;
-                break;
-            default:
-                options = 0;
-                break;
-        }
+        return !checkBox1.isChecked() && !checkBox2.isChecked() && !checkBox3.isChecked() && checkBox4.isChecked() && checkBox5.isChecked()
+                && !checkBox6.isChecked();
+
     }
 
     public boolean checkResult4(View view) {
-        if (options == 2) {
-            displayToast("Right Choice!");
+        if (isCheckAnswerBox()) {
+            displayToast("Question 4: Right Choice!");
             return true;
         } else {
-            displayToast("Wrong Answer");
+            displayToast("Question 4: Wrong Answer");
             return false;
         }
     }
@@ -96,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton right = (RadioButton) findViewById(R.id.five1);
         int checkedId = radioGroup.getCheckedRadioButtonId();
         if (checkedId == right.getId()) {
-            displayToast("Right Choice!");
+            displayToast("Question 5: Right Choice!");
             return true;
         } else {
-            displayToast("Wrong Answer, the answer is: " + right.getText().toString());
+            displayToast("Question 5: Wrong Answer, the answer is: " + right.getText().toString());
             return false;
         }
     }
