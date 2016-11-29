@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="Adventure">Adventure Of A Lifetime</string>
+    <string name="Amazing">Amazing Day</string>
+    <string name="Everglow">Everglow</string>
+    <string name="Hymn">Hymn For The Weekend</string>
+    <string name="Order">ORDER</string>
+    <string name="artist">-- By Coldplay</string>
+    <string name="activity_info">This Activity playing music, with play/pause button\nUsing MediaPlayer</string>
+    <string name="play_button">Play Music Button</string>
+
+    <string name="Adventure_title">Adventure of a lifetime</string>
+    <string name="amazing_title">Amazing Day</string>
+    <string name="everglow_title">Everglow</string>
+    <string name="hymn_title">Hymn For The Weekend</string>
+</resources>
